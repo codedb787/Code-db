@@ -1,14 +1,5 @@
 "use strict";
 
-/* ============================================================
-   ARENA — 2P class-selection battle
-   Ported from a Python/turtle prototype to plain canvas so it
-   runs live, interactively, in any browser with no install.
-   Coordinate system matches the original: origin at screen
-   center, +x right, +y UP. toSX/toSY convert to canvas pixels
-   only at draw time — all game logic stays in "turtle space".
-   ============================================================ */
-
 const canvas = document.getElementById("game");
 const ctx = canvas.getContext("2d");
 const W = canvas.width, H = canvas.height;
