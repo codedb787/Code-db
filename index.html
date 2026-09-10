@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ARENA // 2P Class Selection Battle</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="wrap">
+    <header class="masthead">
+      <h1>ARENA<span class="dim">.</span></h1>
+      <p class="tag">local two-player class-selection battle</p>
+    </header>
+
+    <div class="stage">
+      <canvas id="game" width="900" height="700"></canvas>
+      <div class="scanlines"></div>
+    </div>
+
+    <section class="controls">
+      <div class="col">
+        <h2 class="p1">Player One</h2>
+        <dl>
+          <dt>Move</dt><dd>A / D</dd>
+          <dt>Jump</dt><dd>W</dd>
+          <dt>Fire</dt><dd>S</dd>
+          <dt>Regular Rifle</dt><dd>1</dd>
+          <dt>Pump Shotgun</dt><dd>2</dd>
+        </dl>
+      </div>
+      <div class="col">
+        <h2 class="p2">Player Two</h2>
+        <dl>
+          <dt>Move</dt><dd>&larr; / &rarr;</dd>
+          <dt>Jump</dt><dd>&uarr;</dd>
+          <dt>Fire</dt><dd>&darr;</dd>
+          <dt>Regular Rifle</dt><dd>7</dd>
+          <dt>Pump Shotgun</dt><dd>8</dd>
+        </dl>
+      </div>
+      <div class="col">
+        <h2>Match</h2>
+        <dl>
+          <dt>Rematch</dt><dd>R</dd>
+        </dl>
+        <p class="note">Regular Rifle: single long-range shot, faster cooldown.<br>
+        Pump Shotgun: 4-pellet spread, short range, slower cooldown, more total damage up close.</p>
+      </div>
+    </section>
+
+    <footer>
+      <p>Runs entirely in your browser — one HTML canvas, no install, no server.</p>
+    </footer>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>

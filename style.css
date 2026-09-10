@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+:root{
+  --bg: #0b0d0b;
+  --panel: #121712;
+  --line: #39ff14;
+  --p1: #00ffff;
+  --p2: #ff00ff;
+  --ink: #d7ffd0;
+  --dim: #5c6b58;
+}
+
+*{ box-sizing: border-box; }
+
+html,body{
+  margin:0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Space Mono', monospace;
+}
+
+.wrap{
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 32px 16px 64px;
+}
+
+.masthead{
+  display:flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.masthead h1{
+  font-size: 2.4rem;
+  letter-spacing: 0.08em;
+  margin: 0;
+  color: var(--line);
+  text-shadow: 0 0 14px rgba(57,255,20,0.45);
+}
+.masthead h1 .dim{ color: var(--p2); }
+
+.tag{
+  margin:0;
+  color: var(--dim);
+  font-size: 0.85rem;
+}
+
+.stage{
+  position: relative;
+  width: 100%;
+  aspect-ratio: 900 / 700;
+  border: 1px solid #24301f;
+  box-shadow: 0 0 0 1px #060706, 0 20px 60px -20px rgba(57,255,20,0.15);
+  background: #121212;
+  overflow: hidden;
+}
+
+#game{
+  display:block;
+  width: 100%;
+  height: 100%;
+}
+
+.scanlines{
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.0) 0px,
+    rgba(0,0,0,0.0) 2px,
+    rgba(0,0,0,0.10) 3px
+  );
+  mix-blend-mode: multiply;
+  opacity: 0.5;
+}
+
+.controls{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid #1d251b;
+}
+
+.controls h2{
+  font-size: 0.95rem;
+  margin: 0 0 10px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+.controls h2.p1{ color: var(--p1); }
+.controls h2.p2{ color: var(--p2); }
+
+.controls dl{
+  margin:0;
+  display:grid;
+  grid-template-columns: auto auto;
+  gap: 4px 10px;
+  font-size: 0.82rem;
+}
+.controls dt{ color: var(--dim); }
+.controls dd{ margin:0; color: var(--ink); }
+
+.note{
+  margin: 12px 0 0;
+  color: var(--dim);
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+
+footer{
+  margin-top: 28px;
+  color: var(--dim);
+  font-size: 0.75rem;
+}
+
+@media (max-width: 640px){
+  .controls{ grid-template-columns: 1fr; }
+  .masthead h1{ font-size: 1.9rem; }
+}
